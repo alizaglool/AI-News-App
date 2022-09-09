@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useLayoutEffect } from 'react';
 import { Typography } from '@material-ui/core';
 import wordsToNumbers from 'words-to-numbers';
 import alanBtn from '@alan-ai/alan-sdk-web';
@@ -13,7 +13,7 @@ const App = () => {
 
   const classes = useStyles();
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     alanBtn({
       key: alanKey,
       onCommand: ({ command, articles, number }) => {
